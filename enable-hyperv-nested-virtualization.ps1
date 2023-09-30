@@ -10,7 +10,7 @@ if ((Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V).State -n
 }
 
 # Get the VM
-$vm = Get-VM -ComputerName $computerName
+$vm = Get-VM -Name $computerName
 
 if ($null -eq $vm) {
     Write-Output "No VM found with the name $computerName"
